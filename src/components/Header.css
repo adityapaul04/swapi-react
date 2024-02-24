@@ -1,0 +1,14 @@
+/* Header.css */
+
+.header {
+    background-color: black; 
+    color: #fed700; 
+    padding: 18px; 
+    text-align: center; 
+  }
+  
+  .header-title {
+    margin: 0; /* Remove default margin */
+    font-size: 28px; /* Adjust font size */
+  }
+  

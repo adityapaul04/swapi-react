@@ -1,0 +1,124 @@
+body {
+  background-color: rgb(30, 30, 30);
+}
+
+/* Container styles */
+.planets-container {
+  max-width: 100vw;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px;
+}
+
+/* Title styles */
+.planets-title {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Card styles */
+.planet-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+
+.planet-card {
+  background: linear-gradient(45deg, black, #000000, #000000, black, black, #fed700);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 20%;
+}
+
+.planet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: #CDDC38 0px 0px 10px;
+}
+
+.planet-name {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.planet-info {
+  color: white;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 12px; 
+  max-width: 600px;
+  position: relative;
+  padding: 30px; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+}
+
+/* Button styles */
+.page-button {
+  background-color: #fed700;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.page-button:hover {
+  box-shadow: #CDDC38 0px 0px 10px;
+  background-color: #ffe75f;
+}
+
+.prev-page-button {
+  margin-right: 10px;
+}
+
+.next-page-button {
+  margin-left: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
