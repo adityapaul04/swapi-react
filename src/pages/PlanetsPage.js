@@ -11,6 +11,7 @@ const PlanetsPage = () => {
   const [prevPage, setPrevPage] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [noResidents, setNoResidents] = useState(false);
+  const [currentPlanetName, setCurrentPlanetName] = useState('');
 
   useEffect(() => {
     fetchData();
@@ -41,6 +42,7 @@ const PlanetsPage = () => {
 
   const handlePlanetClick = async (planet) => {
     setSelectedPlanet(planet);
+    setCurrentPlanetName(planet.name);
     const residentsData = await fetchResidents(planet.residents);
     setResidentData(residentsData);
     setIsModalOpen(true);
@@ -98,7 +100,7 @@ const PlanetsPage = () => {
             </div>
           ))}
         </div>
-        <Modal isOpen={isModalOpen} closeModal={closeModal} residents={residentData} noResidents={noResidents} />
+        <Modal isOpen={isModalOpen} closeModal={closeModal} residents={residentData} noResidents={noResidents} planetName={currentPlanetName} />
       </div>
       <div className="button-container">
           <button className="page-button prev-page-button" onClick={handlePrevPage} disabled={!prevPage}>Previous</button>

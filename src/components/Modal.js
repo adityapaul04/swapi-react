@@ -1,12 +1,12 @@
 import React from 'react';
 import "./Modal.css";
 
-const Modal = ({ isOpen, closeModal, residents, noResidents }) => {
+const Modal = ({ isOpen, closeModal, residents, noResidents, planetName }) => {
     return (
         <div className={`modal ${isOpen ? 'open' : ''}`}>
             <div className="modal-content">
                 <span className="close" onClick={closeModal}>&times;</span>
-                <h2>Residents</h2>
+                <h2>Residents of {planetName}</h2> {/* Display planet name here */}
                 {noResidents ? (
                     <p>No residents found for this planet.</p>
                 ) : (
