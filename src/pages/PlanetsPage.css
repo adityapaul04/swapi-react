@@ -122,3 +122,21 @@ body {
   justify-content: center;
   gap: 10px;
 }
+
+/* Media Queries for responsiveness */
+
+@media only screen and (max-width: 1200px) {
+  .planets-container {
+    margin: 20px;
+  }
+  
+  .planet-card {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .planet-card {
+    width: 80%;
+  }
+}
